@@ -237,10 +237,10 @@ patch() {
 
 package
 
+patch
+
 distro
 
 sound
 
 permission
-
-patch
