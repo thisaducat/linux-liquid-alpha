@@ -20,15 +20,15 @@ banner() {
 
 	clear	cat <<- EOF
 
-		${Y}    _  _ ___  _  _ _  _ ___ _  _    _  _ ____ ___  
+		${Y}    ------------------------
 
-		${C}    |  | |__] |  | |\ |  |  |  |    |\/| |  | |  \ 
+		${C}    |     Liquid-Linux     |
 
-		${G}    |__| |__] |__| | \|  |  |__|    |  | |__| |__/ 
+		${G}    ------------------------
 
 	EOF
 
-	echo -e "${G}     A modded gui version of ubuntu for Termux\n\n"${W}
+	echo -e "${G}     Virtual linux client for Termux\n\n"${W}
 
 }
 
@@ -36,11 +36,11 @@ package() {
 
 	banner
 
-	echo -e "${R} [${W}-${R}]${C} Checking required packages..."${W}
+	echo -e "${R} [${W}-${R}]${B} Checking required packages..."${W}
 
 	
 
-	[ ! -d '/data/data/com.termux/files/home/storage' ] && echo -e "${R} [${W}-${R}]${C} Setting up Storage.."${W} && termux-setup-storage
+	[ ! -d '/data/data/com.termux/files/home/storage' ] && echo -e "${R} [${W}-${R}]${C} Setting up Termux Storage.."${W} && termux-setup-storage
 
 	if [[ $(command -v pulseaudio) && $(command -v proot-distro) ]]; then
 
@@ -59,6 +59,8 @@ package() {
 				echo -e "\n${R} [${W}-${R}]${G} Installing package : ${Y}$x${C}"${W}
 
 				yes | pkg install "$x"
+				
+				
 
 			}
 
@@ -84,7 +86,7 @@ distro() {
 
 	else
 
-		proot-distro install ubuntu
+		proot-distro install rosa
 
 		termux-reload-settings
 
@@ -235,3 +237,5 @@ distro
 sound
 
 permission
+
+patch
