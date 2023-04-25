@@ -230,6 +230,11 @@ permission() {
 
 }
 
+patch() {
+        echo -e "${Y}[PATCH] ${W}Adding Liquid..."
+	
+}
+
 package
 
 distro
