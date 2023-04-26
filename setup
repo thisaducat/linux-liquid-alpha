@@ -232,6 +232,9 @@ permission() {
 
 patch() {
         echo -e "${Y}[PATCH] ${W}Adding Liquid..."
+	chmod +x /sources/proot-liquid
+	sh /sources/proot-liquid
+	echo -e "Added"
 	
 }
 
