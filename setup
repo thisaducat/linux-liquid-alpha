@@ -18,7 +18,7 @@ UBUNTU_DIR="$PREFIX/var/lib/proot-distro/installed-rootfs/ubuntu"
 
 banner() {
 
-	clear	cat <<- EOF
+		cat <<- EOF
 
 		${Y}    ------------------------
 
