@@ -86,7 +86,7 @@ distro() {
 
 	else
 
-		proot-distro install rosa
+		proot-distro install liquid
 
 		termux-reload-settings
 
