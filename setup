@@ -28,7 +28,8 @@ banner() {
 
 	EOF
 
-	echo -e "${G}     Virtual linux client for Termux\n\n"${W}
+	echo -e "${G}     Virtual linux client for Termux"${W}
+	echo -e "Powered by ${G}U${R}b${Y}u${C}n${B}t${G}u ${R}M${Y}o${B}d\n\n"${W}
 
 }
 
